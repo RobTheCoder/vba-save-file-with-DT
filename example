@@ -1,0 +1,11 @@
+Sub test()
+    'Generates the file name
+    curDT = Now() 'Gets the current Date and time object
+    formatCurDT = Format(curDT, "YYYY-MM-DD-hh-mm") 'Formats the date time object into a string
+    fn = "example-" & formatCurDT & ".xlsm" 'Concatenates the strings to make a full file name
+    'End Generate file name
+    
+    'Save file to disk
+    fp = "C:\users\root\Desktop\" & fn 'concatenate the filepath and the file name
+    ActiveWorkbook.SaveAs fp, FileFormat:=52 'saves the file
+End Sub
